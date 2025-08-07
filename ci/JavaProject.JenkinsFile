@@ -20,6 +20,8 @@ pipeline {
                     export PATH="$PATH:/opt/gradle/gradle-7.6/bin"
 
                     gradle build
+
+                    echo "Build step completed successfully"
                 '''
             }
         }
