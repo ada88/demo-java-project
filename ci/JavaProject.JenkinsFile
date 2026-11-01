@@ -20,8 +20,15 @@ pipeline {
                     export PATH="$PATH:/opt/gradle/gradle-7.6/bin"
 
                     gradle build
+            
+              echo "build step completed successfully  ......." 
+              echo "build step completed "
+              echo "merge işlemi pull reguestten(kodlar çalışıyormu diye kontrol etme ) sonra yapılır merge(mörc) yapıştırma gibi düşün yazdıgım kodun ana koda yapıştırılması ana maine yapıştırma  " 
 
-                    echo "Build step completed successfully. Next step is Test ...."
+
+ main
+
+                    
                 '''
             }
         }
@@ -40,7 +47,12 @@ pipeline {
                     nohup java -jar demo-0.0.1-SNAPSHOT-${BUILD_NUMBER}.jar &
                     sleep 30
 
-                    echo "Test step completed successfully"
+
+                    echo "test number is in the comment step"
+                    echo "Test step completed successfully "
+                    echo "first step stage then second step commit after step push "
+ main
+
                 '''
             }
         }
